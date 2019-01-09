@@ -2,12 +2,30 @@
 	"sale":[
 		{
 		"id" : 1,
-		"name" : "Shiba Inu",
+		"name" : "Charles",
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
 		"age" : 5,
-		"breed" : "Dogger",
+		"breed" : "Shiba Inu",
 		"price" : "$1231.23",
 		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg"
+		},
+		{
+		"id" : 2,
+		"name" : "Hennry",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"age" : 8,
+		"breed" : "Husky",
+		"price" : "$1651.43",
+		"image" : "https://dogzone-tcwebsites.netdna-ssl.com/wp-content/uploads/2018/07/siberian-husky-price.jpg"
+		},
+		{
+		"id" : 3,
+		"name" : "Buddy",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"age" : 12,
+		"breed" : "Pembroke Welsh Corgi",
+		"price" : "$2311.55",
+		"image" : "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225906/Pembroke-Welsh-Corgi-On-White-05.jpg"		
 		}
 	]
 }
