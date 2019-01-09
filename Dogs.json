@@ -6,7 +6,8 @@
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
 		"age" : 5,
 		"breed" : "Dogger",
-		"price" : "$1231.23"
+		"price" : "$1231.23",
+		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg"
 		},
 		{
 		"id" : 1,
@@ -14,7 +15,9 @@
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
 		"age" : 5,
 		"breed" : "Dogger",
-		"price" : "$1231.23"
+		"price" : "$1231.23",
+		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg"
+
 		},
 		{
 		"id" : 1,
@@ -22,7 +25,8 @@
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
 		"age" : 5,
 		"breed" : "Dogger",
-		"price" : "$1231.23"
+		"price" : "$1231.23",
+		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg"		
 		}
 	]
 }
