@@ -1,0 +1,13 @@
+{
+	Dogs:[
+		{
+		"id" : 1,
+		"name" : "Test",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"age" : 5,
+		"breed" : "Dogger",
+		"price" : "$1231.23"
+		}
+	]
+
+}
