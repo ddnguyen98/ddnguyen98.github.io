@@ -7,16 +7,18 @@
 		"age" : "Age 5",
 		"breed" : "Shiba Inu",
 		"price" : "Price $1231.23",
-		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg"
+		"image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/1200px-Taka_Shiba.jpg",
+		"link" : "https://www.akc.org/dog-breeds/shiba-inu/"
 		},
 		{
 		"id" : 2,
 		"name" : "Hennry",
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
 		"age" : "Age 8",
-		"breed" : "Husky",
+		"breed" : "Siberian Husky",
 		"price" : "Price $1651.43",
 		"image" : "https://dogzone-tcwebsites.netdna-ssl.com/wp-content/uploads/2018/07/siberian-husky-price.jpg"
+		"link" : "https://www.akc.org/dog-breeds/siberian-husky/"
 		},
 		{
 		"id" : 3,
@@ -26,6 +28,7 @@
 		"breed" : "Pembroke Welsh Corgi",
 		"price" : "Price $2311.55",
 		"image" : "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225906/Pembroke-Welsh-Corgi-On-White-05.jpg"		
+		"link" : "https://www.akc.org/dog-breeds/pembroke-welsh-corgi/"
 		}
 	]
 }
