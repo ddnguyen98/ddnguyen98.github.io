@@ -3,7 +3,7 @@
 		{
 		"id" : 1,
 		"name" : "Charles",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"description" : "The Shiba Inu is a breed of dog from Japan. It looks like a smaller version of the Akita Inu, and was first bred for hunting. Shiba Inu is one of seven Japanese dog species recognised as natural symbols of the country.",
 		"age" : "Age 5",
 		"breed" : "Shiba Inu",
 		"price" : "Price $1231.23",
@@ -13,7 +13,7 @@
 		{
 		"id" : 2,
 		"name" : "Hennry",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"description" : "The Siberian Husky is a medium-sized working dog. It is quick and graceful. They have a compact and furry body, pointed ears, and a bushy tail. The husky is a sled dog. It is used for carrying a light load over great distances. Husky's show a balance of power, speed and endurance. Male husky's are usually thicker in appearance than female husky's.",
 		"age" : "Age 8",
 		"breed" : "Siberian Husky",
 		"price" : "Price $1651.43",
@@ -23,7 +23,7 @@
 		{
 		"id" : 3,
 		"name" : "Buddy",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus velit non purus hendrerit volutpat.",
+		"description" : "Corgis have a long torso and short legs, large bones, and a very short tail. Corgis were originally bred as herding dogs. They are very active and like exercise. They are intelligent and have good memories.",
 		"age" : "Age 12",
 		"breed" : "Pembroke Welsh Corgi",
 		"price" : "Price $2311.55",
