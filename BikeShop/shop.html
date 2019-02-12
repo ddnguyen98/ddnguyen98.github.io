@@ -33,24 +33,27 @@
 <section>
     <h3>Product Type</h3>
     <p>Loreum ipsum</p>
-    <form>
+    <form action="" method="POST">
 
         <button>Grid View</button>
         <button>List View</button>
-        <p>Sort By:</p>
-        <select>
-            <option>Featured</option>
-            <option>New</option>
-            <option>Sale</option>
-        </select>
-
+        <p>
+            <label for="sort">Sort By</label>
+            <select name="sort" id="sort">
+                <option>Featured</option>
+                <option>New</option>
+                <option>Sale</option>
+            </select>
+        </p>
         <p>20 items</p>
-        <p>Show</p>
-        <select>
-            <option>9</option>
-            <option>6</option>
-            <option>3</option>
-        </select>
+        <p>
+            <label for="show">Show</label>
+            <select name="show" id="show">
+                <option>9</option>
+                <option>6</option>
+                <option>3</option>
+            </select>
+        </p>
     </form>
 
     <!-- Products -->
