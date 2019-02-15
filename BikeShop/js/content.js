@@ -10,16 +10,16 @@ xhr.onload = function() {
     //Stores variables
     let responseObj = JSON.parse(xhr.responseText);
 
-    if(document.URL.includes("index.html")){
+    if(document.getElementById("homepage")){
         IndexJSON(responseObj);
     }
-    else if(document.URL.includes("shop.html")){
+    else if(document.getElementById("shoppage")){
         ShopJSON(responseObj);
     }
-    else if(document.URL.includes("club_events.html")){
+    else if(document.getElementById("clubpage")){
         ClubEventsJSON(responseObj);
     }
-    else if(document.URL.includes("blog.html")){
+    else if(document.getElementById("blogpage")){
         BlogJSON(responseObj);
     }
 };
@@ -67,7 +67,7 @@ function IndexJSON(response){
         insertContent += '<button>Add to cart</button>';
 
         //Selects section of id fp and chooses article based on i
-        let content = document.querySelector('section#fp article:nth-of-type('+(i+1)+')');
+        let content = document.querySelector('section#products article:nth-of-type('+(i+1)+')');
         content.innerHTML = insertContent;
     }
 
@@ -85,7 +85,7 @@ function IndexJSON(response){
                 '</form>'
         }
         //Changes html
-        let content = document.querySelector('section#mb ul>li:nth-of-type('+(i+1)+')');
+        let content = document.querySelector('section#members ul>li:nth-of-type('+(i+1)+')');
         content.innerHTML = insertContent;
     }
 }
@@ -153,7 +153,7 @@ function BlogJSON(response){
     for (let i = 0; i < 2; ++i){
         insertContent = '<h3><a href="">'+posts[i].title+'</a></h3>';
 
-        let content = document.querySelector('section#rp ul>li:nth-of-type('+(i+1)+')');
+        let content = document.querySelector('section#recentposts ul>li:nth-of-type('+(i+1)+')');
         content.innerHTML = insertContent;
     }
 
