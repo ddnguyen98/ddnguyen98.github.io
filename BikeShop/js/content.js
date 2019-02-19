@@ -21,7 +21,7 @@ xhr.onload = function() {
             //Goes off of colors only contains one
             insertContent += '<article>';
             if(products[i].colors.length === 1){
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color ${responseObj.products[i].color[0]}" width="100" height="100">';
+                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100">';
             }
             else{
                 let colorString = '';
@@ -96,7 +96,7 @@ xhr.onload = function() {
         for(let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
             if(products[i].colors.length === 1){
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color ${responseObj.products[i].color[0]}" width="100" height="100">';
+                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100">';
             }
             else{
                 let colorString = '';
