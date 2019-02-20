@@ -1,7 +1,260 @@
 /* Bike Shop CSS
-================================================== 
+==================================================
 ================================================== */
 
-html {
-	
+/* Font Styles */
+html { font-size: 62.5%; }
+body {
+    font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
+    background: #ffffff;
+    color: #888888;
+}
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+p{
+    color: #666666;
+    margin-bottom: .5rem;
+}
+h2 {
+    line-height: 1;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    color: #111111;
+}
+h3 {
+    line-height: 1;
+    margin-bottom: .5rem;
+    font-size: 1.9rem;
+    color: #444444;
+}
+h4 {
+    font-size: 1.6rem;
+    color: #111111;
+}
+h2 strong {
+    font-size: 3.6rem;
+    display: block;
+    color: #111111;
+}
+strong {
+    font-weight: 700;
+}
+
+/* Page structure */
+.wrapper, #featured{
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    border: 4px solid red;
+}
+
+section {
+    padding: 3rem;
+}
+
+/* Header  */
+header li {
+    max-width: 100%;
+    border: solid blue;
+    margin: 1rem;
+    padding: .5rem;
+    float: left;
+}
+header section{
+    background: lightgrey;
+    padding: 1rem;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Index Page =========== */
+/* Categories  */
+#categories {
+    background: #111111;
+
+}
+#categories h3{
+    color: #DDDDDD;
+
+}
+#categories ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#categories li{
+    text-align: center;
+    border: solid blue;
+    width: 25%;
+    display: inline-block;
+    margin: 1.5rem;
+    float: left;
+}
+#categories::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/* Products  */
+#featured meter {
+    display: block;
+}
+#featured article {
+    width: calc(25% - 6rem / 4);
+    min-height: 20.5em;
+    float: left;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0,0,0,0.05);
+}
+#featured article:not(:nth-of-type(4n)) {
+    margin-right: 2rem;
+}
+
+#featured::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Members  */
+#members h2{
+    text-align: center;
+}
+#members li{
+    width: 30%;
+    margin: 1.5rem;
+    float: left;
+    border: solid blue;
+}
+#members::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Footer */
+footer .wrapper {
+    padding: 1em;
+    background-color: #111111;
+}
+footer .wrapper li a {
+    color: #666666;
+}
+footer .wrapper h3 {
+    color: #DDDDDD;
+}
+footer .wrapper ul strong > a {
+     color: #DDDDDD;
+ }
+footer .wrapper > ul {
+    max-width: 100%;
+    padding: 1rem;
+    float: left;
+    border: solid blue;
+}
+footer .wrapper aside {
+    max-width: 100%;
+    text-align: right;
+    float: right;
+    border: solid blue;
+}
+footer .wrapper aside ul > li {
+    display: inline-block;
+}
+/* Legal Text */
+footer .wrapper section p {
+    max-width: 100%;
+    color: #666666;
+    float: left;
+    border: solid blue;
+}
+footer .wrapper section {
+    width: 100%;
+    padding: 1rem;
+    float: left;
+    border: solid blue;
+}
+footer .wrapper section ul {
+    max-width: 100%;
+    float: right;
+    border: solid blue;
+}
+footer .wrapper section li {
+    display: inline-block;
+}
+footer .wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Shop page ============ */
+
+#collection {
+    display: inline-block;
+    margin: 10rem;
+}
+#collection::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#shop {
+    display: inline-block;
+    width: 75%;
+}
+
+/* Form heading for products */
+#shop form {
+    background-color: lightgrey;
+    border: solid red;
+}
+#shop form button{
+    display: inline-block;
+}
+#shop form p{
+    display: inline-block;
+}
+#shop form p:not(:first-of-type){
+    display: flex;
+    float: right;
+}
+#shop > p {
+    line-height: 5;
+}
+#shop form > * {
+margin: 1rem;
+}
+#products article {
+    width: calc(33% - 6rem / 3);
+    min-height: 15.5em;
+    float: left;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: lightgrey;
+}
+#products > article{
+    text-align: center;
+}
+#products article:not(:nth-of-type(3n)) {
+    margin-right: 2rem;
+}
+#shop::after{
+    content: "";
+    display: block;
+    clear: both;
 }

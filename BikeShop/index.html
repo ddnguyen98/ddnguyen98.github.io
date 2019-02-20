@@ -4,38 +4,42 @@
 <head>
     <meta charset="utf-8" />
     <title>Bike Shop</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <header>
     <h1><img src="images/cycleWorld.png" alt="Cycle World Bike Shop Logo"></h1>
-    <nav>
-        <ul>
-           <li><a href="index.html">Home</a></li>
-           <li><a href="shop.html">Shop</a></li>
-           <li><a href="club_events.html">Club Events</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           <li><a href="contact.html">Contact</a></li>
-           <li><button>My Cart(3)</button></li>
-        </ul>
-    </nav>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="club_events.html">Club Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button>My Cart(3)</button></li>
+            </ul>
+        </nav>
+    </section>
 </header>
 
 <!-- Quick Shop Category -->
-<section>
-    <ul>
-        <li>
-            <h3>Bikes</h3>
-            <a href="shop.html ">Shop Now</a>
-        </li>
-        <li>
-            <h3>Accessories</h3>
-            <a href="shop.html">Shop Now</a>
-        </li>
-        <li>
-            <h3>Apparel</h3>
-            <a href="shop.html">Shop Now</a>
-        </li>
-    </ul>
+<section id="categories">
+        <ul>
+            <li>
+                <h3>Bikes</h3>
+                <a href="shop.html ">Shop Now</a>
+            </li>
+            <li>
+                <h3>Accessories</h3>
+                <a href="shop.html">Shop Now</a>
+            </li>
+            <li>
+                <h3>Apparel</h3>
+                <a href="shop.html">Shop Now</a>
+            </li>
+        </ul>
 </section>
 
 <!-- Featured Products-->
@@ -110,82 +114,83 @@
 <!-- Member Benefits -->
 <section id="members">
     <h2>Cycle Club <strong>Member Benefits</strong></h2>
-    <ul>
-        <li>
-            <h3>Free Shipping</h3>
-            <p>Lorem ipsum dolor sit</p>
-        </li>
-        <li>
-            <h3>In-Store Tune Ups</h3>
-            <p>Lorem ipsum dolor sit</p>
-        </li>
-        <li>
-            <h3>Newsletter</h3>
-            <p>Lorem ipsum dolor sit</p>
-            <form method="POST">
-                <p>
-                    <label for="email">Email</label>
-                    <input name="email" id="email" type="text">
-                </p>
-                <input type="submit" value="Sign Up">
-            </form>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <h3>Free Shipping</h3>
+                <p>Lorem ipsum dolor sit</p>
+            </li>
+            <li>
+                <h3>In-Store Tune Ups</h3>
+                <p>Lorem ipsum dolor sit</p>
+            </li>
+            <li>
+                <h3>Newsletter</h3>
+                <p>Lorem ipsum dolor sit</p>
+                <form method="POST">
+                    <p>
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="text">
+                    </p>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </li>
+        </ul>
 </section>
 
 <!-- Site map & Info -->
 <footer>
-    <ul>
-        <li><a href="">Gift Cards</a></li>
-        <li><a href="">Find a Store</a></li>
-        <li><a href="">Sign Up For Email</a></li>
-        <li><a href="">Become a Member</a></li>
-    </ul>
-    <ul>
-        <li>
-            <a href="">Get help</a>
-            <ul>
-                <li><a href="">Order status</a></li>
-                <li><a href="">Shipping and Delivery</a></li>
-                <li><a href="">Returns</a></li>
-                <li><a href="">Payment Options</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-        </li>
-    </ul>
-    <ul>
-        <li><a href="">News</a></li>
-        <li><a href="">About Cycle World</a>
-            <ul>
-                <li><a href="">Gearup Culture & Careers</a></li>
-                <li><a href="">Investors</a></li>
-                <li><a href="">Sustainable Innovaction</a></li>
-                <li><a href="">CA Supply Chains Act</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-        </li>
-    </ul>
-    <aside>
-        <h3>Social</h3>
+    <div class="wrapper">
         <ul>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Youtube</a></li>
-            <li><a href="">Google Plus</a></li>
-            <li><a href="">Instagram</a></li>
+            <li><strong><a href="">Gift Cards</a></strong></li>
+            <li><strong><a href="">Find a Store</a></strong></li>
+            <li><strong><a href="">Sign Up For Email</a></strong></li>
+            <li><strong><a href="">Become a Member</a></strong></li>
         </ul>
-    </aside>
-    <section>
-        <p>United States 2016 CycleWorld, Inc. All rights Reserved</p>
         <ul>
-            <li><a>Guides</a></li>
-            <li><a>Terms of Use</a></li>
-            <li><a>Privacy Policy</a></li>
+            <li>
+                <strong><a href="">Get help</a></strong>
+                <ul>
+                    <li><a href="">Order status</a></li>
+                    <li><a href="">Shipping and Delivery</a></li>
+                    <li><a href="">Returns</a></li>
+                    <li><a href="">Payment Options</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </li>
         </ul>
-    </section>
+        <ul>
+            <li><strong><a href="">News</a></strong></li>
+            <li><strong><a href="">About Cycle World</a>
+                <ul>
+                    <li><a href="">Gearup Culture & Careers</a></li>
+                    <li><a href="">Investors</a></li>
+                    <li><a href="">Sustainable Innovaction</a></li>
+                    <li><a href="">CA Supply Chains Act</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        <aside>
+            <h3>Social</h3>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">Youtube</a></li>
+                <li><a href="">Google Plus</a></li>
+                <li><a href="">Instagram</a></li>
+            </ul>
+        </aside>
+        <section>
+            <p>United States 2016 CycleWorld, Inc. All rights Reserved</p>
+            <ul>
+                <li><a>Guides</a></li>
+                <li><a>Terms of Use</a></li>
+                <li><a>Privacy Policy</a></li>
+            </ul>
+        </section>
+    </div>
 </footer>
 
 <script src="js/content.js"></script>
-
 </body>
 </html>
