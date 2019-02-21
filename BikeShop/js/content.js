@@ -160,6 +160,7 @@ xhr.onload = function() {
         //Recent posts (First two on JSON file)
         for (let i = 0; i < 2; ++i){
             insertContent += '<li>';
+            insertContent += '<img src="'+posts[i].imageURL+'" alt="'+posts[i].title+'" width="100" height="100">';
             insertContent += '<h3><a href="">'+posts[i].title+'</a></h3>';
             insertContent += '</li>';
         }
@@ -178,7 +179,7 @@ xhr.onload = function() {
         for (let i = 0; i < itemMax; ++i){
             insertContent += '<artcle>';
             insertContent += '<h3>'+posts[i].title+'</h3>';
-            //Placeholder for images
+            insertContent += '<img src="'+posts[i].imageURL+'" alt="'+posts[i].title+'" width="100" height="100">';
             insertContent += '<p>'+posts[i].postDate+'</p>';
             insertContent += '<p>'+posts[i].text+'</p>';
             insertContent += '<a href="">Read More</a>';
