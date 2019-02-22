@@ -42,76 +42,50 @@ strong {
 }
 
 /* Page structure */
-.wrapper, #featured{
-    max-width: 1000px;
-    height: 100%;
+.wrapper{
+    max-width: 900px;
+    padding: 3rem;
     margin: 0 auto;
     border: 4px solid red;
 }
 
-section {
-    padding: 3rem;
-}
-
-/* Header  */
-header li {
-    max-width: 100%;
-    border: solid blue;
-    margin: 1rem;
-    padding: .5rem;
-    float: left;
-}
-header section{
-    background: lightgrey;
-    padding: 1rem;
-}
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-section nav::after {
+.wrapper::after {
     content: "";
     display: block;
     clear: both;
 }
+
+/* Header  */
 
 /* Index Page =========== */
 /* Categories  */
 #categories {
     background: #111111;
-
-}
-#categories h3{
-    color: #DDDDDD;
-
-}
-#categories ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-#categories li{
+    color: #ffffff;
     text-align: center;
-    border: solid blue;
-    width: 25%;
-    display: inline-block;
-    margin: 1.5rem;
+}
+#categories li {
+    width: calc(100%/3 - 2rem/3);
     float: left;
+    padding: 4rem 0;
+    background: green;
 }
-#categories::after {
-    content: "";
-    display: block;
-    clear: both;
+#categories li:not(:nth-of-type(3n)) {
+    margin-right: 1rem;
 }
-
-
-
+#categories h3 {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    background: rgba(0,0,0,0.8);
+    color: #ffffff;
+}
+#categories a {
+    display: inline-block;
+    padding: 1rem;
+    background: red;
+    color: #ffffff;
+}
 /* Products  */
-#featured meter {
-    display: block;
-}
 #featured article {
     width: calc(25% - 6rem / 4);
     min-height: 20.5em;
@@ -122,12 +96,6 @@ section nav::after {
 }
 #featured article:not(:nth-of-type(4n)) {
     margin-right: 2rem;
-}
-
-#featured::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* Members  */
@@ -314,8 +282,33 @@ margin: 1rem;
     float: left;
     max-width: calc(75% - 3rem);
 }
+#posts article{
+    padding-bottom: 3rem;
+}
 
 #posts::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Contact ================= */
+/* Recent Posts */
+#contact {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+#contact::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#contactmessage {
+    display: inline-block;
+    width: 50%;
+}
+#contactmessage::after {
     content: "";
     display: block;
     clear: both;

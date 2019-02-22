@@ -15,8 +15,8 @@ xhr.onload = function() {
         let insertContent = '';
         let products = responseObj.products;
 
+        insertContent += '<div class ="wapper">';
         insertContent += '<h2>Shop <strong>Featured Products</strong></h2>';
-
         for (let i = 0; i < document.querySelectorAll("#featured article").length; ++i) {
             //Goes off of colors only contains one
             insertContent += '<article>';
@@ -54,7 +54,7 @@ xhr.onload = function() {
             insertContent += '<button>Add to cart</button>';
             insertContent += '</article>';
         }
-
+        insertContent += '</div>';
         let productsContent = document.querySelector('#featured');
         productsContent.innerHTML = insertContent;
     }
@@ -177,17 +177,16 @@ xhr.onload = function() {
             itemMax = posts.length
         }
         for (let i = 0; i < itemMax; ++i){
-            insertContent += '<artcle>';
+            insertContent += '<article>';
             insertContent += '<h3>'+posts[i].title+'</h3>';
             insertContent += '<img src="'+posts[i].imageURL+'" alt="'+posts[i].title+'" width="100" height="100">';
             insertContent += '<p>'+posts[i].postDate+'</p>';
             insertContent += '<p>'+posts[i].text+'</p>';
             insertContent += '<a href="">Read More</a>';
-            insertContent += '</artcle>';
-
-            let contentPosts = document.querySelector('#posts');
-            contentPosts.innerHTML = insertContent;
+            insertContent += '</article>';
         }
+        let contentPosts = document.querySelector('#posts');
+        contentPosts.innerHTML = insertContent;
     }
 };
 
