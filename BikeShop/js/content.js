@@ -15,7 +15,7 @@ xhr.onload = function() {
         let insertContent = '';
         let products = responseObj.products;
 
-        insertContent += '<div class ="wapper">';
+        insertContent += '<div class ="wrapper">';
         insertContent += '<h2>Shop <strong>Featured Products</strong></h2>';
         for (let i = 0; i < document.querySelectorAll("#featured article").length; ++i) {
             //Goes off of colors only contains one
