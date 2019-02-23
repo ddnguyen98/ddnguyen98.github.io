@@ -141,10 +141,12 @@ xhr.onload = function() {
         //Looks through event json
         for(let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
+            insertContent += '<div class="wrapper">';
             insertContent += '<p>'+events[i].date+'</p>';
             insertContent += '<h3>'+events[i].title+'</h3>';
             insertContent += '<p>Located at '+events[i].location+' '+events[i].text+'</p>';
             insertContent += '<a href="">RSVP here</a>';
+            insertContent += '</div>';
             insertContent += '</article>';
         }
         //updates current html
@@ -176,6 +178,7 @@ xhr.onload = function() {
         if(posts.length < 9) {
             itemMax = posts.length
         }
+        insertContent += '<div class="wrapper">';
         for (let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
             insertContent += '<h3>'+posts[i].title+'</h3>';
@@ -185,6 +188,7 @@ xhr.onload = function() {
             insertContent += '<a href="">Read More</a>';
             insertContent += '</article>';
         }
+        insertContent += '</div>';
         let contentPosts = document.querySelector('#posts');
         contentPosts.innerHTML = insertContent;
     }

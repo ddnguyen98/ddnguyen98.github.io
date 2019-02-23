@@ -254,30 +254,23 @@ margin: 1rem;
 /* Club Events Page ================= */
 /* Events */
 #events article {
-    width: calc(100%);
+    width: 100%;
     float: left;
+    margin-bottom: 3rem;
     display: inline-block;
-    padding: 2rem;
-    margin: 0;
-}
-#events::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 #events article::before {
     float: left;
-    width: 20rem;
-    height: 20rem;
-    margin-right: 5rem;
+    width: 60rem;
+    height: 35rem;
     content: "";
     background-color: black;
     display: inline-block;
+    margin: 2rem 2rem 2rem 4rem;
 }
 #events article:nth-of-type(2n)::before {
     float: right;
-    margin-right: 0;
-    margin-left: 5rem;
+    margin: 2rem 4rem 2rem 2rem;
 }
 
 /* Blog ================= */
