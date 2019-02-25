@@ -12,9 +12,15 @@ body {
 h1, h2, h3, h4 {
     text-transform: uppercase;
 }
+del {
+    text-decoration: line-through;
+}
 p{
     color: #666666;
     margin-bottom: .5rem;
+}
+a{
+    color: #666666;
 }
 h2 {
     line-height: 1;
@@ -44,7 +50,7 @@ strong {
 /* Page structure */
 .wrapper{
     max-width: 1000px;
-    padding: 3rem;
+    padding: 2rem;
     margin: 0 auto;
     border: 4px solid red;
 }
@@ -58,8 +64,12 @@ strong {
 /* Header  */
 header {
     position: relative;
+    padding: 27rem;
+    background: url("../images/banner.jpg") center/100% 110% no-repeat;
+
+}
+#condensed{
     padding: 20rem;
-   /* background-image: */
 }
 header h1 {
     position: absolute;
@@ -71,9 +81,15 @@ header h2 {
     bottom: 0;
 }
 /* Navigation ==================== */
+#styling{
+    width: 100%;
+    height: .5rem;
+    position: absolute;
+    background: #c0392b;
+}
 nav {
     width: 100%;
-    background: grey;
+    background: #444444;
     text-align: center;
     position: absolute;
     top: 0;
@@ -84,10 +100,16 @@ nav li {
 }
 nav a {
     display: block;
-    padding: 1rem;
+    padding: 1rem 2rem;
     color: #ffffff;
 }
-
+nav button{
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+    background-color: #c0392b;
+}
 
 
 /* Index Page =========== */
@@ -97,55 +119,145 @@ nav a {
     color: #ffffff;
     text-align: center;
 }
+#bikesbackground{
+    background: url("../images/bikes.jpg") center/100% no-repeat;
+}
+#accbackground{
+    background: url("../images/speedometer.jpg") center/100% no-repeat;
+}
+#apperalbackground{
+    background: url("../images/backpack.jpg") center/100% no-repeat;
+}
 #categories li {
     width: calc(100%/3 - 2rem/3);
     float: left;
     padding: 4rem 0;
-    background: green;
 }
 #categories li:not(:nth-of-type(3n)) {
     margin-right: 1rem;
 }
 #categories h3 {
-    padding: 1rem 0;
-    margin-bottom: 1rem;
-    background: rgba(0,0,0,0.8);
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    background: rgba(0,0,0,.6);
     color: #ffffff;
 }
 #categories a {
     display: inline-block;
-    padding: 1rem;
-    background: red;
+    padding: .7rem;
+    background: #c0392b;
     color: #ffffff;
 }
+
 /* Products  */
 #featured article {
     width: calc(25% - 6rem / 4);
     min-height: 40rem;
+    max-height: 40rem;
     float: left;
-    padding: 1rem;
     margin-bottom: 2rem;
-    background: rgba(0,0,0,0.05);
+    border: solid .1rem;
+    position: relative;
+    overflow: hidden;
+}
+#featured button {
+    text-align: left;
+    color: #ffffff;
+    position: absolute;
+    padding: .5rem;
+    left: 0;
+    top: 12rem;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+#featured p, #featured h3{
+    padding: 1rem;
+}
+#featured img{
+    text-align: center;
+    width: calc(100%);
+    height: 15rem;
 }
 #featured article:not(:nth-of-type(4n)) {
     margin-right: 2rem;
 }
+del::before {
+    content: "Sale";
+    display: block;
+    padding: .7rem 1rem .7rem 2rem;
+    background: #c0392b;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    left: -.5rem;
+    transform: skew(-10deg);
+}
 
 /* Members  */
-#members h2{
+
+#members{
     text-align: center;
+    background: url("../images/gears.jpg") no-repeat center/ 100% 100%;
+
+}
+#membersdesign{
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+#members strong, #members h3{
+    color: #ffffff;
+}
+#members p{
+    line-height: 2;
+}
+#members ul{
+    position: relative;
 }
 #members li{
-    width: 30%;
+    width: calc(100%/3 - 3rem);
+    height: 25rem;
     margin: 1.5rem;
+    color: #666666;
     float: left;
-    border: solid blue;
+    position: relative;
+    padding-top: 15rem;
 }
-#members::after {
-    content: "";
-    display: block;
-    clear: both;
+#members li::before{
+    content: url("../images/truck.png");
+    border: #ffffff solid;
+    opacity: .5;
+    position: absolute;
+    top: -1rem;
+    left: 8.5rem;
 }
+#members li:nth-of-type(2)::before {
+    content: url("../images/wrench.png");
+
+}
+#members li:nth-of-type(3)::before {
+    content: url("../images/envelope.png");
+}
+#members #submit{
+    margin: 0;
+    line-height: 1.6;
+    padding: .3rem;
+    color: #ffffff;
+    background-color: #c0392b;
+    display: inline-block;
+    width: 25%;
+}
+#members #email{
+    width: 70%;
+    float: left;
+}
+#members form{
+    width: 100%;
+}
+#members label{
+    display: none;
+}
+
 
 /* Footer */
 footer {
@@ -155,6 +267,10 @@ footer {
 footer li a {
     color: #666666;
 }
+footer li {
+    color: #666666;
+    padding: .5rem;
+}
 footer h3 {
     color: #DDDDDD;
 }
@@ -163,15 +279,13 @@ footer ul strong > a {
  }
 footer .wrapper > ul {
     max-width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     float: left;
-    border: solid blue;
 }
 footer .wrapper aside {
-    max-width: 100%;
+    width: 25%;
     text-align: right;
     float: right;
-    border: solid blue;
 }
 footer aside ul > li {
     display: inline-block;
@@ -181,18 +295,16 @@ footer section p {
     max-width: 100%;
     color: #666666;
     float: left;
-    border: solid blue;
 }
 footer section {
     width: 100%;
+    border-top: .1rem solid #666666 ;
     padding: 1rem;
     float: left;
-    border: solid blue;
 }
 footer section ul {
     max-width: 100%;
     float: right;
-    border: solid blue;
 }
 footer section li {
     display: inline-block;
@@ -207,6 +319,9 @@ footer section li {
     padding-left: 2rem;
     float: left;
     width: 20%;
+}
+#collection h3, #collection li{
+    padding: .7rem;
 }
 #shop {
     display: inline-block;
@@ -239,10 +354,17 @@ margin: 1rem;
 }
 #products article {
     width: calc(100% / 3 - 6rem/3);
-    min-height: 20em;
+    min-height: 22em;
     float: left;
     margin-bottom: 2rem;
     background-color: lightgrey;
+    position: relative;
+    overflow: hidden;
+}
+#products img{
+    text-align: center;
+    width: calc(100%);
+    height: 22rem;
 }
 #products > article {
     text-align: center;
@@ -278,50 +400,36 @@ margin: 1rem;
 
 #blogcategory {
     display: inline-block;
-    padding: 1rem;
-    text-align: right;
-    max-width: calc(25% - 1rem);
+    width: calc(25%);
 }
-
-#blogcategory::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 #posts {
     display: inline-block;
     float: left;
-    max-width: calc(75% - 3rem);
+    padding: 1rem;
+    width: calc(75% - 1rem);
+}
+#posts .wrapper{
 }
 #posts article{
     padding-bottom: 3rem;
-}
-
-#posts::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* Contact ================= */
 /* Recent Posts */
 #contact {
     display: inline-block;
+    text-align: left;
     width: 50%;
     float: left;
 }
-#contact::after {
-    content: "";
-    display: block;
-    clear: both;
+#contact p{
+    padding: 5rem 0;
 }
 #contactmessage {
     display: inline-block;
     width: 50%;
 }
-#contactmessage::after {
-    content: "";
-    display: block;
-    clear: both;
+
+iframe{
+    width: 100%;
 }

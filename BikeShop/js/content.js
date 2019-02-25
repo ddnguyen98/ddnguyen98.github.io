@@ -62,7 +62,8 @@ xhr.onload = function() {
     if(document.querySelector('#members')){
         let insertContent = '';
         let benefits = responseObj.benefits;
-
+        insertContent += '<div id="membersdesign">';
+        insertContent += '<div class="wrapper">';
         insertContent += '<h2>Cycle Club <strong>Member Benefits</strong></h2>';
         insertContent += '<ul>';
         for(let i = 0; i < document.querySelectorAll('#members li').length; ++i){
@@ -75,13 +76,14 @@ xhr.onload = function() {
                 insertContent += '<form method="POST">';
                 insertContent += '<p><label for="email">Email</label>';
                 insertContent += '<input name="email" id="email" type="text"></p>';
-                insertContent += '<input type="submit" value="Sign Up">';
+                insertContent += '<input type="submit" id="submit" value="Sign Up">';
                 insertContent += '</form>';
             }
             insertContent += '</li>';
         }
         insertContent += '</ul>';
-
+        insertContent += '</div>';
+        insertContent += '</div>';
         let membersContent = document.querySelector('#members');
         membersContent.innerHTML = insertContent;
     }
@@ -178,7 +180,6 @@ xhr.onload = function() {
         if(posts.length < 9) {
             itemMax = posts.length
         }
-        insertContent += '<div class="wrapper">';
         for (let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
             insertContent += '<h3>'+posts[i].title+'</h3>';
@@ -188,7 +189,6 @@ xhr.onload = function() {
             insertContent += '<a href="">Read More</a>';
             insertContent += '</article>';
         }
-        insertContent += '</div>';
         let contentPosts = document.querySelector('#posts');
         contentPosts.innerHTML = insertContent;
     }
