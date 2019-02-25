@@ -46,10 +46,10 @@ xhr.onload = function() {
             insertContent += '<p>'+products[i].description+'</p>';
             //Will change if price has a sale included
             if(products[i].salePrice.length === 0){
-                insertContent += '<p>$'+products[i].price+'</p>';
+                insertContent += '<p><strong>$'+products[i].price+'</strong></p>';
             }
             else{
-                insertContent += '<p>$'+products[i].salePrice+' $<del>'+products[i].price+'</del></p>';
+                insertContent += '<p><strong>$'+products[i].salePrice+'</strong> $<del>'+products[i].price+'</del></p>';
             }
             insertContent += '<button>Add to cart</button>';
             insertContent += '</article>';
@@ -183,8 +183,8 @@ xhr.onload = function() {
         for (let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
             insertContent += '<h3>'+posts[i].title+'</h3>';
-            insertContent += '<img src="'+posts[i].imageURL+'" alt="'+posts[i].title+'" width="100" height="100">';
             insertContent += '<p>'+posts[i].postDate+'</p>';
+            insertContent += '<img src="'+posts[i].imageURL+'" alt="'+posts[i].title+'" width="100" height="100">';
             insertContent += '<p>'+posts[i].text+'</p>';
             insertContent += '<a href="">Read More</a>';
             insertContent += '</article>';
