@@ -58,7 +58,6 @@ strong {
     max-width: 1000px;
     padding: 2rem;
     margin: 0 auto;
-    border: 4px solid red;
 }
 
 .wrapper::after {
@@ -339,8 +338,9 @@ footer section li {
 
 /* Form heading for products */
 #shop form {
-    background-color: lightgrey;
-    margin: 2rem 0;
+    padding: 0 1rem;
+    border: solid #666666 .1rem;
+    position: relative;
 }
 #shop form button{
     display: inline-block;
@@ -348,14 +348,22 @@ footer section li {
 #shop form p{
     display: inline-block;
 }
-#shop form p:not(:first-of-type){
+#shop #sort, #shop #show{
+    padding: .5rem;
+}
+#shop form p:nth-of-type(3){
     float: right;
+}
+#shop form p:nth-of-type(2){
+    right: 12rem;
+    top: .5rem;
+    position: absolute;
 }
 #shop > p {
     line-height: 5;
 }
-#shop form > * {
-margin: 1rem;
+#shop form > p {
+    padding: .5rem;
 }
 
 #products {
@@ -366,7 +374,6 @@ margin: 1rem;
     min-height: 22em;
     float: left;
     margin-bottom: 2rem;
-    background-color: lightgrey;
     position: relative;
     overflow: hidden;
 }
@@ -374,6 +381,31 @@ margin: 1rem;
     text-align: center;
     width: calc(100%);
     height: 22rem;
+}
+#products button{
+    position: absolute;
+    bottom: 0;
+    margin: 1rem;
+}
+#products button:nth-of-type(1){
+    position: absolute;
+    background: #c0392b;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+    color: #ffffff;
+    left: .5rem;
+}
+#products button:nth-of-type(2) {
+    right: 7rem;
+
+}
+#products button:nth-of-type(3) {
+    right: 0;
+}
+#products p{
+    font-size: 3rem;
+    border-bottom: solid #666666 .1rem;
 }
 #products > article {
     text-align: center;
@@ -469,17 +501,60 @@ margin: 1rem;
 #contact {
     display: inline-block;
     text-align: left;
-    width: 50%;
+    margin:  0 3rem;
+    padding: 1rem;
+    width: calc(50% - 6rem);
     float: left;
 }
-#contact p{
-    padding: 5rem 0;
+#contact h3, #contact h4, #contactmessage h3{
+    padding: 2rem 0;
+}
+#contact a{
+    color:  #c0392b;
 }
 #contactmessage {
     display: inline-block;
+    padding: 1rem;
     width: 50%;
 }
-
+#contactmessage form{
+    height: 100%;
+}
+#contactmessage #submit{
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 2rem;
+    width: calc(60% - 3rem);
+    color: #ffffff;
+    background-color: #c0392b;
+}
+#contactmessage #reset{
+    border: solid .2rem #666666;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1rem;
+    width: 40%;
+}
+#contactmessage #message{
+    margin-top: 2rem;
+    width: 100%;
+    line-height: 3rem;
+    resize: none;
+}
+#contactmessage fieldset{
+    margin-bottom: 1rem;
+}
+#contactmessage fieldset p{
+    border-bottom: #666666 solid .1rem;
+    width: calc(50% - 1rem);
+    display: inline-block;
+}
+#contactmessage label{
+    display: none;
+}
+#contactmessage #name, #contactmessage #email{
+    width: 100%;
+}
 iframe{
     width: 100%;
 }
