@@ -9,9 +9,9 @@
 </head>
 <body>
 <header id="condensed">
-    <h1><img src="images/cycleWorld.png" alt="Cycle World Bike Shop Logo"></h1>
-    <h2>Shop</h2>
-    <nav>
+    <div class="wrapper">
+        <h1><img src="images/cycleWorld.png" alt="Cycle World Bike Shop Logo"></h1>
+    </div>    <nav>
         <div id="styling"></div>
         <ul>
             <li> <a href="index.html"> Home</a></li>
@@ -24,19 +24,17 @@
     </nav>
 </header>
 <!-- Shop Page -->
+<div class="wrapper">
 <aside id="collection">
     <!-- List for each product type on home page -->
-    <div class="wrapper">
     <h3>Collection</h3>
     <ul>
         <li><a href="">Bikes</a></li>
         <li><a href="">Accessories</a></li>
         <li><a href="">Apparel</a></li>
     </ul>
-    </div>
 </aside>
 <section id="shop">
-    <div class="wrapper">
     <h3>Store items</h3>
     <p>Loreum ipsum</p>
     <form method="POST">
@@ -50,15 +48,17 @@
                 <option>Sale</option>
             </select>
         </p>
-        <p>20 items</p>
-        <p>
-            <label for="show">Show</label>
-            <select name="show" id="show">
-                <option>9</option>
-                <option>6</option>
-                <option>3</option>
-            </select>
-        </p>
+        <div>
+            <p>20 items</p>
+            <p>
+                <label for="show">Show</label>
+                <select name="show" id="show">
+                    <option>9</option>
+                    <option>6</option>
+                    <option>3</option>
+                </select>
+            </p>
+        </div>
     </form>
     <!-- Products -->
     <section id="products">
@@ -117,8 +117,9 @@
             <button>Zoom in</button>
         </article>
     </section>
-    </div>
 </section>
+</div>
+
 <!-- Site map & Info -->
 <footer>
     <div class="wrapper">
@@ -153,13 +154,13 @@
             </li>
         </ul>
         <aside>
-            <h3>Social</h3>
+            <h3><strong>Social</strong></h3>
             <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">Youtube</a></li>
-                <li><a href="">Google Plus</a></li>
-                <li><a href="">Instagram</a></li>
+                <li><a class="sociallink" data-value="Facebook" href=""></a></li>
+                <li><a class="sociallink" data-value="Twitter" href=""></a></li>
+                <li><a class="sociallink" data-value="Youtube" href=""></a></li>
+                <li><a class="sociallink" data-value="Google Plus" href=""></a></li>
+                <li><a class="sociallink" data-value="Instagram" href=""></a></li>
             </ul>
         </aside>
         <section>

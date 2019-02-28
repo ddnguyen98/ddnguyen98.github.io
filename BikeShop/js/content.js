@@ -21,7 +21,7 @@ xhr.onload = function() {
             //Goes off of colors only contains one
             insertContent += '<article>';
             if(products[i].colors.length === 1){
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100">';
+                insertContent += '<p class="thumbnail"><img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100"><p>';
             }
             else{
                 let colorString = '';
@@ -38,10 +38,10 @@ xhr.onload = function() {
                     }
                 }
                 //Other img if colors contains more than 1
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is available in the colors '+colorString+'" width="100" height="100">';
+                insertContent += '<p class="thumbnail"><img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is available in the colors '+colorString+'" width="100" height="100"></p>';
             }
             //Data
-            insertContent += '<meter value="'+products[i].rating+'" min="0" max="5">'+products[i].rating+' out of 5 stars</meter>';
+            insertContent += '<div class="rating" data-value="'+products[i].rating+'"><meter value="'+products[i].rating+'" min="0" max="5">'+products[i].rating+' out of 5 stars</meter></div>';
             insertContent += '<h3>'+products[i].title+'</h3>';
             insertContent += '<p>'+products[i].description+'</p>';
             //Will change if price has a sale included
@@ -98,7 +98,7 @@ xhr.onload = function() {
         for(let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
             if(products[i].colors.length === 1){
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100">';
+                insertContent += '<p class="thumbnail"><img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is in the color '+responseObj.products[i].colors[0]+'" width="100" height="100"></p>';
             }
             else{
                 let colorString = '';
@@ -115,13 +115,13 @@ xhr.onload = function() {
                     }
                 }
                 //Other img if colors contains more than 1
-                insertContent += '<img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is available in the colors '+colorString+'" width="100" height="100">';
+                insertContent += '<p class="thumbnail"><img src="'+products[i].imageURL+'" alt="'+products[i].title+' that is available in the colors '+colorString+'" width="100" height="100"></p>';
             }
             if(products[i].salePrice.length === 0){
                 insertContent += '<p>$'+products[i].price+'</p>';
             }
             else{
-                insertContent += '<p>$'+products[i].salePrice+' $<del>'+products[i].price+'</del></p>';
+                insertContent += '<p>$'+products[i].salePrice+' <del>$'+products[i].price+'</del></p>';
             }
             insertContent += '<h4>'+products[i].title+'</h4>';
             insertContent += '<button>Add To Cart</button>';
@@ -143,12 +143,11 @@ xhr.onload = function() {
         //Looks through event json
         for(let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
-            insertContent += '<div class="wrapper">';
-            insertContent += '<p>'+events[i].date+'</p>';
+            insertContent += '<img src="https://s23705.pcdn.co/wp-content/uploads/2017/08/Membership-9.99.png" alt="Event Post">';
             insertContent += '<h3>'+events[i].title+'</h3>';
+            insertContent += '<p>'+events[i].date+'</p>';
             insertContent += '<p>Located at '+events[i].location+' '+events[i].text+'</p>';
             insertContent += '<a href="">RSVP here</a>';
-            insertContent += '</div>';
             insertContent += '</article>';
         }
         //updates current html
@@ -160,6 +159,7 @@ xhr.onload = function() {
         let insertContent = '';
         let posts = responseObj.posts;
 
+        insertContent += '<h3>Recent Post</h3>';
         insertContent += '<ul>';
         //Recent posts (First two on JSON file)
         for (let i = 0; i < 2; ++i){

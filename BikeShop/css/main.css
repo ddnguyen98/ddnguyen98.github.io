@@ -9,7 +9,7 @@ body {
     background: #ffffff;
     color: #888888;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, button, input {
     text-transform: uppercase;
 }
 del {
@@ -66,24 +66,23 @@ strong {
     clear: both;
 }
 
+
 /* Header  */
 header {
     position: relative;
-    padding: 27rem;
-    background: url("../images/banner.jpg") center/100% 110% no-repeat;
+    padding: 15rem;
+    background: url("../images/banner.jpg") no-repeat;
+    background-size: cover;
 
 }
 #condensed{
-    padding: 20rem;
+    padding: 5rem 15rem;
 }
 header h1 {
-    position: absolute;
-    left: 10rem;
-    top: 10rem;
+
 }
 header h2 {
-    position: absolute;
-    bottom: 0;
+
 }
 /* Navigation ==================== */
 #styling{
@@ -115,7 +114,11 @@ nav button{
     color: #ffffff;
     background-color: #c0392b;
 }
-
+nav button::before{
+    content: url("../images/cart.png");
+    display: inline-block;
+    padding-right: 1rem;
+}
 
 /* Index Page =========== */
 /* Categories  */
@@ -143,6 +146,8 @@ nav button{
 }
 #categories h3 {
     padding: 1.5rem 0;
+    font-weight: bold;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     background: rgba(0,0,0,.6);
     color: #ffffff;
@@ -157,37 +162,66 @@ nav button{
 /* Products  */
 #featured article {
     width: calc(25% - 6rem / 4);
-    min-height: 40rem;
-    max-height: 40rem;
     float: left;
     margin-bottom: 2rem;
-    border: solid .1rem;
+    padding: 1rem;
+    border: 1px solid transparent;
     position: relative;
     overflow: hidden;
+}
+#featured h3{
+    font-weight: bold;
+}
+#featured article:hover {
+    border-color: rgba(0,0,0,0.2);
+}
+#featured article:hover button {
+    display: block;
+}
+#featured article:hover img {
+    filter: grayscale(0%);
 }
 #featured button {
     text-align: left;
     color: #ffffff;
     position: absolute;
     padding: .5rem;
-    left: 0;
-    top: 12rem;
-    width: 100%;
+    left: 3px;
+    top: calc(12rem + 3px);
+    width: calc(100% - 6px);
     background: rgba(0,0,0,.6);
+    display: none;
 }
-
+#featured button::before{
+    content: url("../images/cart.png");
+    display: inline-block;
+    opacity: .9;
+    padding-right: 1rem;
+}
+#featured .thumbnail {
+    width: calc(100% + 2rem -  6px);
+    position: relative;
+    top: calc(-1rem + 3px);
+    left: calc(-1rem + 3px);
+    height: 15rem;
+    overflow: hidden;
+    padding-top: 0;
+}
 #featured p, #featured h3{
-    padding: 1rem;
+    padding-top: .5rem;
 }
 #featured img{
-    text-align: center;
     width: calc(100%);
-    height: 15rem;
+    height: 17rem;
+    filter: grayscale(100%);
 }
 #featured article:not(:nth-of-type(4n)) {
     margin-right: 2rem;
 }
-del::before {
+#featured article:nth-of-type(4n+1) {
+    clear: left;
+}
+#featured del::before {
     content: "Sale";
     display: block;
     padding: .5rem 1rem .5rem 2rem;
@@ -195,19 +229,33 @@ del::before {
     color: white;
     position: absolute;
     top: 2rem;
-    left: -1rem;
-    transform: skew(-10deg);
+    left: 3px;
 }
-
+.rating {
+    height: 2rem;
+    position: relative;
+    top: -.5rem;
+    background: url('https://ddnguyen98.github.io/BikeShop/images/ratings.png') left top no-repeat;
+    background-size: auto 22rem;
+}
+.rating[data-value='1'] { background-position: 0 -4rem; }
+.rating[data-value='2'] { background-position: 0 -8rem; }
+.rating[data-value='3'] { background-position: 0 -12rem; }
+.rating[data-value='4'] { background-position: 0 -16rem; }
+.rating[data-value='5'] { background-position: 0 -20rem; }
+meter{ display: none; }
 /* Members  */
 
 #members{
     text-align: center;
-    background: url("../images/gears.jpg") no-repeat center/ 100% 100%;
+    height: 45rem;
+    background: url("../images/gears.jpg") no-repeat center;
+    background-size: cover;
 
 }
 #membersdesign{
     background-color: rgba(0,0,0,.7);
+    height: 45rem;
     z-index: 2;
 }
 #members strong, #members h3{
@@ -215,6 +263,10 @@ del::before {
 }
 #members h2{
     color: #666666;
+    font-weight: bold;
+}
+#members h3{
+    font-weight: bold;
 }
 #members p{
     line-height: 2;
@@ -268,6 +320,21 @@ del::before {
 
 
 /* Footer */
+footer .sociallink{
+    display: inline-block;
+    padding: 1.5rem;
+    background: url("../images/social.png") no-repeat;
+    background-size: 15rem;
+    opacity: .5;
+}
+footer .sociallink:hover{
+    opacity: 1;
+}
+.sociallink[data-value='Facebook'] { background-position: 0 0 }
+.sociallink[data-value='Twitter'] { background-position: -3rem 0; }
+.sociallink[data-value='Youtube'] { background-position: -6rem 0; }
+.sociallink[data-value='Google Plus'] { background-position: -9rem 0; }
+.sociallink[data-value='Instagram'] { background-position: -12rem 0; }
 footer {
     padding: 1em;
     background-color: #111111;
@@ -277,7 +344,7 @@ footer li a {
 }
 footer li {
     color: #666666;
-    padding: .5rem;
+    padding: 1rem 0;
 }
 footer h3 {
     color: #DDDDDD;
@@ -316,6 +383,7 @@ footer section ul {
 }
 footer section li {
     display: inline-block;
+    padding: 0 1rem;
 }
 
 
@@ -324,7 +392,7 @@ footer section li {
 #collection {
     display: inline-block;
     text-align: left;
-    padding-left: 2rem;
+    padding-right: 2rem;
     float: left;
     width: 20%;
 }
@@ -338,72 +406,92 @@ footer section li {
 
 /* Form heading for products */
 #shop form {
-    padding: 0 1rem;
     border: solid #666666 .1rem;
-    position: relative;
+    padding: 1rem;
+}
+#shop form div{
+    float: right;
 }
 #shop form button{
-    display: inline-block;
+    padding: .5rem;
 }
 #shop form p{
     display: inline-block;
+    padding: 0 1rem;
+    margin-bottom: 0;
 }
+#shop form p:nth-of-type(2){
+    display: inline-block;
+}
+
 #shop #sort, #shop #show{
     padding: .5rem;
 }
-#shop form p:nth-of-type(3){
-    float: right;
-}
-#shop form p:nth-of-type(2){
-    right: 12rem;
-    top: .5rem;
-    position: absolute;
+#shop h3{
+    font-size: 4rem;
 }
 #shop > p {
     line-height: 5;
 }
-#shop form > p {
-    padding: .5rem;
-}
-
 #products {
+    padding: 1rem;
+}
+#products h4{
     padding: 1rem;
 }
 #products article {
     width: calc(100% / 3 - 6rem/3);
-    min-height: 22em;
+    height: 20em;
     float: left;
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
 }
 #products img{
-    text-align: center;
-    width: calc(100%);
-    height: 22rem;
+    width: 100%;
+    height: 20rem;
+}
+#products .thumbnail {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 15rem;
+    overflow: hidden;
+}
+#products del{
+    color: #c0392b;
+}
+#products del::before {
+    content: "Sale";
+    display: block;
+    padding: .5rem 1rem .5rem 2rem;
+    background: #c0392b;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    left: -1rem;
+    font-size: 2rem;
 }
 #products button{
     position: absolute;
     bottom: 0;
-    margin: 1rem;
 }
 #products button:nth-of-type(1){
     position: absolute;
     background: #c0392b;
     border-radius: .5rem;
     padding: 1rem;
-    margin: 1rem;
     color: #ffffff;
     left: .5rem;
 }
 #products button:nth-of-type(2) {
     right: 7rem;
-
 }
 #products button:nth-of-type(3) {
     right: 0;
 }
-#products p{
+#products p:nth-of-type(2){
     font-size: 3rem;
     border-bottom: solid #666666 .1rem;
 }
@@ -418,28 +506,37 @@ footer section li {
 /* Events */
 #events article {
     width: 100%;
-    float: left;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     display: inline-block;
 }
+#events article:nth-of-type(2n) img{
+    float: right;
+    margin-left: 10rem;
+    margin-right: 0;
+}
+#events .wrapper{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
 #events p{
-    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+#events p:first-of-type{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+#events h3{
+    margin-bottom: 1rem;
 }
 #events a{
     color: #c0392b;
 }
-#events article::before {
-    float: left;
-    content: "";
-    width: 60rem;
-    height: 35rem;
-    background:  url("../images/backpack.jpg");;
+#events img{
     display: inline-block;
-    margin: 2rem 2rem 2rem 4rem;
-}
-#events article:nth-of-type(2n)::before {
-    float: right;
-    margin: 2rem 4rem 2rem 2rem;
+    margin-right: 10rem;
+    float: left;
+    width: 55%;
 }
 
 /* Blog ================= */
@@ -451,13 +548,17 @@ footer section li {
     width: calc(25%);
 }
 #blogcategory ul:first-of-type li{
-    border-bottom: solid #666666 .1rem;
+    border-bottom: solid #999999 .1rem;
     padding: 1rem 0;
 }
 #blogcategory h3{
     margin: 1rem 0;
+    padding-bottom: 2rem;
+    font-size: 2rem;
 }
-
+#recentposts h3{
+    padding-top: 2rem;
+}
 #recentposts a{
     color: #c0392b;
 }
@@ -477,11 +578,16 @@ footer section li {
 #posts a{
     background-color: #c0392b;
     color: #ffffff;
-    padding: .7rem 1rem;
-    border-radius: 3rem;
+    padding: .7rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+
 }
 #posts p{
     padding: 2rem 0;
+}
+#posts h3{
+    font-size: 2.5rem;
 }
 #posts img{
     width: 100%;
@@ -506,8 +612,12 @@ footer section li {
     width: calc(50% - 6rem);
     float: left;
 }
+#contact h3, #contactmessage h3{
+    font-size: 2.5rem;
+}
 #contact h3, #contact h4, #contactmessage h3{
     padding: 2rem 0;
+    font-weight: bold;
 }
 #contact a{
     color:  #c0392b;
@@ -521,7 +631,8 @@ footer section li {
     height: 100%;
 }
 #contactmessage #submit{
-    border-radius: 1rem;
+    border-radius: .5rem;
+    border: solid .2rem #c0392b;
     padding: 1rem;
     margin-right: 2rem;
     width: calc(60% - 3rem);
@@ -530,12 +641,13 @@ footer section li {
 }
 #contactmessage #reset{
     border: solid .2rem #666666;
-    border-radius: 1rem;
+    border-radius: .5rem;
     background-color: white;
     padding: 1rem;
     width: 40%;
 }
 #contactmessage #message{
+    border: solid .1rem #666666;
     margin-top: 2rem;
     width: 100%;
     line-height: 3rem;
@@ -549,11 +661,17 @@ footer section li {
     width: calc(50% - 1rem);
     display: inline-block;
 }
+#contactmessage fieldset p:first-of-type{
+    margin-right: 1rem;
+}
 #contactmessage label{
     display: none;
 }
 #contactmessage #name, #contactmessage #email{
     width: 100%;
+}
+#contactwrapper {
+    padding: 5rem 2rem;
 }
 iframe{
     width: 100%;

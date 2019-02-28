@@ -9,8 +9,9 @@
 </head>
 <body>
 <header id="condensed">
-    <h1><img src="images/cycleWorld.png" alt="Cycle World Bike Shop Logo"></h1>
-    <h2>Contact</h2>
+    <div class="wrapper">
+        <h1><img src="images/cycleWorld.png" alt="Cycle World Bike Shop Logo"></h1>
+    </div>
     <nav>
         <div id="styling"></div>
         <ul>
@@ -23,7 +24,7 @@
         </ul>
     </nav>
 </header>
-<div class="wrapper">
+<div class="wrapper" id="contactwrapper">
     <!-- Contact Info -->
     <section id="contact">
         <h3>How to find us</h3>
@@ -45,16 +46,16 @@
             <fieldset>
                 <p>
                     <label for="name">Name</label>
-                    <input name="name" id="name" type="text">
+                    <input name="name" id="name" type="text" value="Name">
                 </p>
                 <p>
                     <label for="email">Email</label>
-                    <input name="email" id="email" type="text">
+                    <input name="email" id="email" type="text" value="Email">
                 </p>
             </fieldset>
             <p>
                 <label for="message">Message</label>
-                <textarea rows="6" name="message" id="message"></textarea>
+                <textarea rows="6" name="message" id="message" >MESSAGE</textarea>
             </p>
             <input id="submit" type="submit">
             <input id="reset" type="reset">
@@ -100,13 +101,13 @@
             </li>
         </ul>
         <aside>
-            <h3>Social</h3>
+            <h3><strong>Social</strong></h3>
             <ul>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">Youtube</a></li>
-                <li><a href="">Google Plus</a></li>
-                <li><a href="">Instagram</a></li>
+                <li><a class="sociallink" data-value="Facebook" href=""></a></li>
+                <li><a class="sociallink" data-value="Twitter" href=""></a></li>
+                <li><a class="sociallink" data-value="Youtube" href=""></a></li>
+                <li><a class="sociallink" data-value="Google Plus" href=""></a></li>
+                <li><a class="sociallink" data-value="Instagram" href=""></a></li>
             </ul>
         </aside>
         <section>
