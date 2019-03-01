@@ -11,20 +11,22 @@ itemsFilter.addEventListener('change', Filter);
 function ItemsPerPage(event) {
     let target = event.target;
     let shop = target.parentElement.parentElement.parentElement.parentElement;
+    let form = target.parentElement.parentElement.parentElement;
+    let sort = form.querySelector('#sort');
     let div = target.parentElement.parentElement;
     let items = div.querySelector("p");
     let content = shop.querySelector('#products');
 
     if (target.value === '9'){
-        content.innerHTML = FillHTML(+target.value, false);
+        content.innerHTML = FillHTML(+target.value, sort.value);
         items.innerHTML = content.children.length + " items";
     }
     else if (target.value === '6'){
-        content.innerHTML = FillHTML(+target.value, false);
+        content.innerHTML = FillHTML(+target.value, sort.value);
         items.innerHTML = content.children.length + " items";
     }
     else if (target.value === '3'){
-        content.innerHTML = FillHTML(+target.value, false);
+        content.innerHTML = FillHTML(+target.value, sort.value);
         items.innerHTML = content.children.length + " items";
     }
 }
@@ -34,15 +36,16 @@ function Filter(event){
     let shop = target.parentElement.parentElement.parentElement;
     let form = target.parentElement.parentElement;
     let items = form.querySelector("div");
+    let show = items.querySelector('#show');
     let itemsP = items.querySelector("p");
     let content = shop.querySelector('#products');
 
     if(target.value === 'Sale'){
-        content.innerHTML = FillHTML(9, true);
+        content.innerHTML = FillHTML(+show.value, target.value);
         itemsP.innerHTML = content.children.length + " items";
     }
     else{
-        content.innerHTML = FillHTML(9 , false);
+        content.innerHTML = FillHTML(+show.value , target.value);
         itemsP.innerHTML = content.children.length + " items";
     }
 
@@ -58,7 +61,7 @@ function FillHTML(im, sale) {
     }
 
     for(let i = 0; i < itemMax; ++i){
-        if(sale){
+        if(sale === 'Sale'){
             if(products[i].salePrice.length === 0){
                 continue;
             }
