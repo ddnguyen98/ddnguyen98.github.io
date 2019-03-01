@@ -78,12 +78,6 @@ header {
 #condensed{
     padding: 5rem 15rem;
 }
-header h1 {
-
-}
-header h2 {
-
-}
 /* Navigation ==================== */
 #styling{
     width: 100%;
@@ -121,6 +115,7 @@ nav button::before{
 }
 
 /* Index Page =========== */
+
 /* Categories  */
 #categories {
     background: #111111;

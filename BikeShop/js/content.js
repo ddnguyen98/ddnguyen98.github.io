@@ -93,7 +93,7 @@ xhr.onload = function() {
         let products = responseObj.products;
         let itemMax = 9;
         if(products.length < 9){
-            itemMax = products.length
+            itemMax = products.length;
         }
         for(let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
@@ -138,7 +138,7 @@ xhr.onload = function() {
         let events = responseObj.events;
         let itemMax = 9;
         if(events.length < 9) {
-            itemMax = events.length
+            itemMax = events.length;
         }
         //Looks through event json
         for(let i = 0; i < itemMax; ++i){
@@ -178,7 +178,7 @@ xhr.onload = function() {
         let posts = responseObj.posts;
         let itemMax = 9;
         if(posts.length < 9) {
-            itemMax = posts.length
+            itemMax = posts.length;
         }
         for (let i = 0; i < itemMax; ++i){
             insertContent += '<article>';
