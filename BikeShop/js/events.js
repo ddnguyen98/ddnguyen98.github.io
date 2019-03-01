@@ -42,7 +42,7 @@ function Filter(event){
         itemsP.innerHTML = content.children.length + " items";
     }
     else{
-        content.innerHTML = FillHTML(9);
+        content.innerHTML = FillHTML(9 , false);
         itemsP.innerHTML = content.children.length + " items";
     }
 
@@ -56,6 +56,7 @@ function FillHTML(im, sale) {
     if(products.length < itemMax){
         itemMax = products.length;
     }
+
     for(let i = 0; i < itemMax; ++i){
         if(sale){
             if(products[i].salePrice.length === 0){
